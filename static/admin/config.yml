@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: sotirismorf/blog-hugo
+  repo: z1zmolab/website
   branch: production
 
 publish_mode: editorial_workflow
