@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: z1zmolab/website
+  repo: g1zmolab/website
   branch: production
 
 publish_mode: editorial_workflow
