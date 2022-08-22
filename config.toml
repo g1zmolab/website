@@ -73,6 +73,10 @@ title = "Gizmolab"
         identifier = "about"
         name = "Σχετικά"
         url = "/about"
+      [[languages.el.menu.main]]
+        identifier = "provoles"
+        name = "Προβολές"
+        url = "/tags/provoles"
   [languages.en]
     languageName = "English"
     subtitle = "A hacklab based in Thessaloniki"
@@ -94,3 +98,7 @@ title = "Gizmolab"
         identifier = "about"
         name = "About"
         url = "/about"
+      [[languages.el.menu.main]]
+        identifier = "provoles"
+        name = "Movie Shows"
+        url = "/tags/provoles"
