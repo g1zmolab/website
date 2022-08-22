@@ -1,12 +1,17 @@
 baseurl = "https://gizmolab.netlify.com/"
-languageCode = "en-us"
+#languageCode = "en-us"
+defaultContentLanguage = "el"
+languageCode = "el-gr"
 theme = "terminal"
 paginate = 5
+copyright = "© copyleft 2022 gizmolab"
+title = "Gizmolab"
 
 [params]
   # dir name of your main content (default is `content/posts`).
   # the list of set content will show up on your index page (baseurl).
   contentTypeName = "posts"
+  keywords = "hacklab, free software, foss, open source, thessaloniki"
 
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
@@ -14,13 +19,8 @@ paginate = 5
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 2
 
-  # show selector to switch language
   showLanguageSelector = false
-
-  # set theme to full screen width
   fullWidthTheme = false
-
-  # center theme with default width
   centerTheme = true
 
   # if your resource directory contains an image called `cover.(jpg|png|webp)`,
@@ -38,8 +38,7 @@ paginate = 5
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
-  # set all headings to their default size (depending on browser settings)
-  oneHeadingSize = false # default
+  oneHeadingSize = false
 
   # whether to show a page's estimated reading time
   # readingTime = false # default
@@ -52,14 +51,32 @@ paginate = 5
   # can be overridden in a page's front-matter
   # TocTitle = "Table of Contents" # default
 
+
 [languages]
+  [languages.el]
+    languageName = "Ελληνικά"
+    subtitle = "Το gizmolab είναι ένα hack-lab στην Θεσσαλονίκη"
+    menuMore = "Περισσότερα"
+    readMore = "Διάβασε περισσότερα"
+    readOtherPosts = "Άλλες δημοσιεύσεις"
+    newerPosts = "Νεότερες δημοσιεύσεις"
+    olderPosts = "Παλαιότερες δημοσιεύσεις"
+    missingContentMessage = "Page not found..."
+    missingBackButtonLabel = "Back to home page"
+
+    [languages.el.params.logo]
+      logoText = "Gizmolab"
+      logoHomeLink = "/"
+
+    [languages.el.menu]
+      [[languages.el.menu.main]]
+        identifier = "about"
+        name = "Σχετικά"
+        url = "/about"
   [languages.en]
     languageName = "English"
-    title = "Gizmolab"
     subtitle = "A hacklab based in Thessaloniki"
     owner = "Gizmolab team"
-    keywords = ""
-    copyright = "© copyleft 2022 Gizmolab"
     menuMore = "Show more"
     readMore = "Read more"
     readOtherPosts = "Read other posts"
