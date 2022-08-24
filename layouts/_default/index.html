@@ -13,7 +13,11 @@
 	</div>
 	<div class="home-box-child framed">
 		<h3><i>Επόμενη συνέλευση: </i></h3>
-		<p>{{ time.Format "Monday, 2 January 15:04" .Site.Data.next_assembly.date }}</p>
+		{{ if .Site.Data.next_assembly }}
+			<p>{{ time.Format "Monday, 2 January 15:04" .Site.Data.next_assembly.date }}</p>
+		{{ else }}
+			<p>Δεν έχει οριστεί</p>
+		{{ end}}
 	</div>
 </div>
 
