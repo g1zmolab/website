@@ -1,0 +1,21 @@
+.home-box-parent-no {
+	columns: 2;
+	column-gap: 10px;
+}
+
+.home-box-parent {
+	padding-top: 1rem;
+	display: flex;
+	gap: 1rem;
+}
+
+
+.home-box-child {
+	flex-grow: 1;
+}
+
+@media only screen and (max-width: 45em) {
+	.home-box-parent {
+		flex-direction: column;
+	}
+}

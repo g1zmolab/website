@@ -25,12 +25,22 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Pages"
+  - label: "Σελίδες"
     name: "pages"
     files:
-      - label: "About Page"
+      - label: "Σχετικά"
         name: "about"
         file: "content/about.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
+      - label: "Επόμενη συνέλευση"
+        name: "next-assembly"
+        file: "data/next_assembly.yml"
+        fields:
+          - label: "Ημερομηνία"
+            name: "date"
+            widget: "datetime"
+            date_format: "DD/MM/YYYY" # e.g. 24.12.2021
+            time_format: "HH:mm" # e.g. 21:07
+            format: "YYYY-MM-DDTHH:mm:ss"
