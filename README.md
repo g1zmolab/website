@@ -16,7 +16,7 @@
     `https://random-website.com/posts/this-is-a-slug`
     - If the Title of the post is: "Why Vim is a great text editor", an example of a fitting slug is "why-vim-is-a-great-text-editor"
 
-## How develop the website
+## How to develop the website
 
 #### Requirements:
 
