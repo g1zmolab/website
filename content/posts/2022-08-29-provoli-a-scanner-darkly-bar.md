@@ -1,7 +1,8 @@
 ---
 layout: blog
 title: 'Προβολή: "A Scanner Darkly" + bar'
-date: 2022-07-10T00:47:48.970Z
+slug_url: provoli-a-scanner-darkly-bar
+date: 2022-07-12T09:58:41.937Z
 tags:
   - provoles
 ---
