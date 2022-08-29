@@ -10,9 +10,8 @@ tags:
 
 Θα ακολουθήσει μπαρ οικονομικής ενίσχυσης του εγχειρήματος.
 
-Τοποθεσία:
-Κοινωνικό Κέντρο Ovradera, Επισκόπου Αμβροσίου 3, Θεσσαλονίκη
+**Τοποθεσία:**\
+Κοινωνικό Κέντρο Ovradera,\
+Επισκόπου Αμβροσίου 3, Θεσσαλονίκη
 
-```html
-<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=22.936443686485294%2C40.638442224873884%2C22.942194342613224%2C40.64083575679348&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/40.63964/22.93932">View Larger Map</a></small>
-```
+<iframe width="400" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=22.938551902771%2C40.63904061589954%2C22.941427230834964%2C40.640237381859365&amp;layer=mapnik&amp;marker=40.639639001561385%2C22.93998956680298" style="border: 1px solid black"></iframe><br/>
