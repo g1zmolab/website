@@ -1,3 +1,7 @@
+.container {
+	max-width: 1024px;
+}
+
 .home-box-parent-no {
 	columns: 2;
 	column-gap: 10px;
@@ -18,4 +22,16 @@
 	.home-box-parent {
 		flex-direction: column;
 	}
+}
+
+.menu__inner.menu__inner--desktop {
+	float: right;
+}
+
+.footer {
+	user-select: none;
+}
+
+.footer__inner {
+	width: auto;
 }
