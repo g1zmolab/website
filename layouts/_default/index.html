@@ -7,18 +7,8 @@
 
 
 <div class="home-box-parent">
-	<div class="home-box-child framed">
-		<h3><i>Επόμενη εκδήλωση: </i></h3>
-		<p>Coming soon...</p>
-	</div>
-	<div class="home-box-child framed">
-		<h3><i>Επόμενη συνέλευση: </i></h3>
-		{{ if .Site.Data.next_assembly }}
-			<p>{{ time.Format "Monday, 2 January 15:04" .Site.Data.next_assembly.date }}</p>
-		{{ else }}
-			<p>Δεν έχει οριστεί</p>
-		{{ end}}
-	</div>
+	{{ partial "future_events.html" . }}
+	{{ partial "next_assembly.html" . }}
 </div>
 
 <div class="posts">

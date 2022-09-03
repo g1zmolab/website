@@ -25,6 +25,20 @@ collections:
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", widget: "list"}
+#     - {label: "Cover", name: "cover", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "events" # Used in routes, e.g., /admin/collections/blog
+    label: "Events"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Event Date", name: "event_date", widget: "datetime"}
+      - {label: "Slug for URL", name: "slug_url", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Σελίδες"
     name: "pages"
@@ -32,6 +46,12 @@ collections:
       - label: "Σχετικά"
         name: "about"
         file: "content/about.md"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Body, name: body, widget: markdown}
+      - label: "Επικοινωνία"
+        name: "contact"
+        file: "content/contact.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
