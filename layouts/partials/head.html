@@ -49,8 +49,8 @@
 {{ if and (not .IsHome) (isset .Params "cover") }}
   <meta property="og:image" content="{{ .Param "cover" | absURL }}">
 {{ else }}
-  {{ if isset $.Site.Params "favicon" }}
-    <meta property="og:image" content="{{ $.Site.Params.favicon | absURL }}">
+  {{ if $.Site.Params.customCover }}
+    <meta property="og:image" content="{{ $.Site.Params.customCover | absURL }}">
   {{ else }}
     <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
   {{ end }}

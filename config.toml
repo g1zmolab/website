@@ -6,6 +6,12 @@ theme = "terminal"
 paginate = 5
 copyright = "🄯 copyleft 2022 gizmolab"
 title = "Gizmolab"
+timeZone = "Europe/Athens"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
   # dir name of your main content (default is `content/posts`).
@@ -17,7 +23,7 @@ title = "Gizmolab"
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 2
+  showMenuItems = 3
 
   showLanguageSelector = false
   fullWidthTheme = false
@@ -27,6 +33,9 @@ title = "Gizmolab"
   # then the file will be used as a cover automatically.
   # With this option you don't have to put the `cover` param in a front-matter.
   autoCover = true
+  
+  # set a custom cover (default is the favicon)
+  customCover = "gizmolab-cover.png"
 
   # set post to show the last updated
   # If you use git, you can set `enableGitInfo` to `true` and then post will automatically get the last updated
@@ -34,7 +43,7 @@ title = "Gizmolab"
 
   # set a custom favicon (default is a `themeColor` square)
   favicon = "gizmolab-favicon.ico"
-
+  
   # Provide a string as a prefix for the last update date. By default, it looks like this: 2020-xx-xx [Updated: 2020-xx-xx] :: Author
   # updatedDatePrefix = "Updated"
 
@@ -61,44 +70,54 @@ title = "Gizmolab"
     readOtherPosts = "Άλλες δημοσιεύσεις"
     newerPosts = "Νεότερες δημοσιεύσεις"
     olderPosts = "Παλαιότερες δημοσιεύσεις"
-    missingContentMessage = "Page not found..."
-    missingBackButtonLabel = "Back to home page"
+    missingContentMessage = "Η σελίδα δε βρέθηκε..."
+    missingBackButtonLabel = "Πίσω στην αρχική σελίδα"
 
     [languages.el.params.logo]
+      logoImg = "/gizmolab-logo-small.png"
       logoText = "Gizmolab"
       logoHomeLink = "/"
 
     [languages.el.menu]
       [[languages.el.menu.main]]
-        identifier = "about"
-        name = "Σχετικά"
-        url = "/about"
-      [[languages.el.menu.main]]
         identifier = "provoles"
         name = "Προβολές"
         url = "/tags/provoles"
-  [languages.en]
-    languageName = "English"
-    subtitle = "A hacklab based in Thessaloniki"
-    owner = "Gizmolab team"
-    menuMore = "Show more"
-    readMore = "Read more"
-    readOtherPosts = "Read other posts"
-    newerPosts = "Newer posts"
-    olderPosts = "Older posts"
-    missingContentMessage = "Page not found..."
-    missingBackButtonLabel = "Back to home page"
-
-    [languages.en.params.logo]
-      logoText = "Gizmolab"
-      logoHomeLink = "/"
-
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-        identifier = "about"
-        name = "About"
-        url = "/about"
+        weight = 1
       [[languages.el.menu.main]]
-        identifier = "provoles"
-        name = "Movie Shows"
-        url = "/tags/provoles"
+        identifier = "about"
+        name = "Σχετικά"
+        url = "/about"
+        weight = 2
+      [[languages.el.menu.main]]
+        identifier = "contact"
+        name = "Επικοινωνία"
+        url = "/contact"
+        weight = 3
+        
+#  [languages.en]
+#    languageName = "English"
+#    subtitle = "A hacklab based in Thessaloniki"
+#    owner = "Gizmolab team"
+#    menuMore = "Show more"
+#    readMore = "Read more"
+#    readOtherPosts = "Read other posts"
+#    newerPosts = "Newer posts"
+#    olderPosts = "Older posts"
+#    missingContentMessage = "Page not found..."
+#    missingBackButtonLabel = "Back to home page"
+
+#    [languages.en.params.logo]
+#      logoImg = "/gizmolab-logo-small.png"
+#      logoText = "Gizmolab"
+#      logoHomeLink = "/"
+
+#    [languages.en.menu]
+#      [[languages.en.menu.main]]
+#        identifier = "about"
+#        name = "About"
+#        url = "/about"
+#      [[languages.el.menu.main]]
+#        identifier = "movies"
+#        name = "Movie Shows"
+#        url = "/tags/provoles"
