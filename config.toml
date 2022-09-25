@@ -80,9 +80,9 @@ timeZone = "Europe/Athens"
 
     [languages.el.menu]
       [[languages.el.menu.main]]
-        identifier = "provoles"
-        name = "Προβολές"
-        url = "/tags/provoles"
+        identifier = "ekdiloseis"
+        name = "Εκδηλώσεις"
+        url = "/events"
         weight = 1
       [[languages.el.menu.main]]
         identifier = "about"
