@@ -3,7 +3,7 @@ layout: blog
 title: 'Παρουσίαση του hacklab + προβολή: "Wargames" (1983)'
 event_date: 2022-04-09T14:00:17.132Z
 slug_url: parousiasi-hacklab
-date: 2022-04-04T19:56:17.173Z
+date: 2022-04-05T19:56:17.173Z
 tags:
   - ekdiloseis
   - provoles
