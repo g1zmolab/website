@@ -9,7 +9,6 @@
 
 .thumbnail {
 	display: flex;
-	display: flex;
 	flex-shrink: 0;
 	align-items: center;
 	padding-left: 30px;
@@ -47,9 +46,18 @@
 	flex-grow: 1;
 }
 
-@media only screen and (max-width: 45em) {
+@media only screen and (max-width: 50em) {
 	.home-box-parent {
 		flex-direction: column;
+	}
+
+	.post-thumbnail-parent {
+		flex-direction: column;
+	}
+
+	.thumbnail {
+		justify-content: center;
+		padding-left: unset;
 	}
 }
 
