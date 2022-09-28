@@ -50,7 +50,9 @@
 	{{if .Params.thumbnail}}
 		{{ $url := printf "%s%s" .Site.BaseURL .Params.thumbnail }}
 		{{ $image := resources.GetRemote $url }}
-		<img class="single-post-image" src="{{ $image.RelPermalink }}">
+		<a href="{{$image.RelPermalink}}">
+			<img class="single-post-image" src="{{ $image.RelPermalink }}">
+		</a>
 		<style>
 			.single-post-image {
 				border: solid;
@@ -60,6 +62,12 @@
 				margin-left: auto;
 				margin-right: auto;
 				max-width: 70%;
+			}
+
+			@media only screen and (max-width: 50em) {
+				.single-post-image {
+					max-width: 95%;
+				}
 			}
 		</style>
 	{{end}}
