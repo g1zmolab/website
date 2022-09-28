@@ -4,6 +4,7 @@ title: Προβολή επεισοδίων "The Twilight Zone" + after bar
 event_date: 2022-06-28T16:00:55.981Z
 slug_url: provoles-ep-twillight-zone-after-bar
 date: 2022-06-21T12:40:56.033Z
+thumbnail: /images/twilight-zone-28-6-22.jpg
 tags:
   - provoles
 ---
@@ -18,5 +19,3 @@ tags:
 *I* *Sing* *the* *Body* *Electric* (1962), s03e35, 25'
 
 Θα ακολουθήσει μπαρ οικονομικής ενίσχυσης του εγχειρήματος.
-
-![](/images/twilight-zone-28-6-22.jpg)

@@ -2,6 +2,35 @@
 	max-width: 1024px;
 }
 
+.post-thumbnail-parent {
+	display: flex;
+	flex-direction: row;
+}
+
+.thumbnail {
+	display: flex;
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	padding-left: 30px;
+}
+
+.thumbnail-link {
+
+	background-color: #ffa86a;
+}
+
+.thumbnail-link img {
+	border: solid;
+	border-color: #ffa86a;
+	/* object-fit: cover; */
+	transition: 100ms;
+}
+
+.thumbnail-link img:hover {
+	opacity: 0.9;
+}
+
 .home-box-parent-no {
 	columns: 2;
 	column-gap: 10px;

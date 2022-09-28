@@ -38,6 +38,7 @@ collections:
       - {label: "Event Date", name: "event_date", widget: "datetime"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Εικόνα", name: "thumbnail", widget: "image", choose_url: true}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Σελίδες"
