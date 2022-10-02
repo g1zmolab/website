@@ -3,7 +3,7 @@
 	{{ $future_events := (where (where site.RegularPages "Type" "events") ".Params.event_date" "gt" (now.Format "2006-01-02T15:04:05-0700")) }}
 	{{ if gt $future_events 0 }}	
 		{{ range first 2 ( sort $future_events ".Params.event_date" ) }}
-   			<p>{{ time.Format "Monday, 2 January 15:04" (time .Params.event_date).Local }}: 
+   			<p>{{ time.Format "Monday, 2 January 15:04" (time .Params.event_date) }}: 
 				<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
 			</p>
 		{{ end }}
