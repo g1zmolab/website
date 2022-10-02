@@ -2,7 +2,7 @@
 layout: blog
 title: Κείμενο αυτοπαρουσίασης
 slug_url: keimeno-autoparousiasis
-date: 2022-04-16T14:57:02.502Z
+date: 2022-04-16T14:57:00.000Z
 tags:
   - keimena
 ---
