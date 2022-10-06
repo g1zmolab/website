@@ -23,7 +23,7 @@ timeZone = "Europe/Athens"
   themeColor = "orange"
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 4
+  showMenuItems = 5
 
   showLanguageSelector = false
   fullWidthTheme = false
@@ -84,6 +84,11 @@ timeZone = "Europe/Athens"
         name = "Projects"
         url = "/projects"
         weight = 1
+      [[languages.el.menu.main]]
+        identifier = "actions"
+        name = "Δράσεις"
+        url = "/actions"
+        weight = 2
       [[languages.el.menu.main]]
         identifier = "ekdiloseis"
         name = "Εκδηλώσεις"
