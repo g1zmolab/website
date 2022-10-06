@@ -37,7 +37,7 @@ collections:
       - {label: "Event Date", name: "event_date", widget: "datetime"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true}
+      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "actions" # Used in routes, e.g., /admin/collections/blog
@@ -51,7 +51,7 @@ collections:
       - {label: "Event Date", name: "event_date", widget: "datetime"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true}
+      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "projects" # Used in routes, e.g., /admin/collections/blog
@@ -64,7 +64,7 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true}
+      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Σελίδες"
