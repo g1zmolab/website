@@ -5,6 +5,11 @@
 </div>
 {{ end }}
 <div class="posts">
+	{{ $numOfPages := len .Paginator.Pages }}
+	{{ if eq $numOfPages 0 }}
+	<h2>{{ .Site.Params.emptySectionMessage }}</h2>
+	{{ end }}
+
 	{{ range .Paginator.Pages }}
 	<div class="post on-list post-thumbnail-parent">
 		<div>
@@ -31,7 +36,6 @@
 			{{ end }}
 
 			{{ partial "cover.html" . }}
-
 
 			<div class="post-content">
 				{{ if .Params.showFullContent }}
