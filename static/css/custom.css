@@ -67,7 +67,6 @@
 	}
 }
 
-
 .menu__inner.menu__inner--desktop {
 	float: right;
 }
@@ -88,4 +87,20 @@
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 70%;
+}
+
+.index-category-content {
+  margin-top: 0px;
+  --accent: #ffa86a;
+  --border: 3px dotted var(--accent);
+  border-bottom: var(--border);
+  color: var(--accent);
+}
+
+.index-category-content::after {
+  border-bottom: var(--border);
+  margin-bottom: 2px;
+  content: "";
+  display: block;
+  width: 100%;
 }
