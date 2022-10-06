@@ -41,6 +41,19 @@ collections:
       - {label: "Εικόνα", name: "thumbnail", widget: "image", choose_url: true}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "projects" # Used in routes, e.g., /admin/collections/blog
+    label: "Projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug for URL", name: "slug_url", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Εικόνα", name: "thumbnail", widget: "image", choose_url: true}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - label: "Σελίδες"
     name: "pages"
     files:
