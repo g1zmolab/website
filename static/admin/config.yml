@@ -3,7 +3,7 @@ backend:
   repo: g1zmolab/website
   branch: production
 
-media_folder: "static/images"
+media_folder: "assets/images"
 public_folder: "/images"
 
 local_backend: true
