@@ -2,6 +2,10 @@
 	max-width: 1024px;
 }
 
+.logo-gizmo {
+	max-width: 150px;
+}
+
 .post-thumbnail-parent {
 	display: flex;
 	flex-direction: row;
@@ -30,10 +34,6 @@
 	opacity: 0.9;
 }
 
-.thumbnail-image {
-	max-width: 250px;
-}
-
 .home-box-parent-no {
 	columns: 2;
 	column-gap: 10px;
@@ -44,7 +44,6 @@
 	display: flex;
 	gap: 1rem;
 }
-
 
 .home-box-child {
 	flex-grow: 1;
