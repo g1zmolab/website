@@ -48,28 +48,9 @@
 	</div>
 
 	{{if .Params.thumbnail}}
-		{{ $url := printf "%s%s" .Site.BaseURL .Params.thumbnail }}
-		{{ $image := resources.GetRemote $url }}
-		<a href="{{$image.RelPermalink}}">
-			<img class="single-post-image" src="{{ $image.RelPermalink }}">
+		<a href="{{ .Params.thumbnail }}">
+			<img class="single-post-image" src="{{ .Params.thumbnail }}">
 		</a>
-		<style>
-			.single-post-image {
-				border: solid;
-				border-color: #ffa86a;
-				padding: 5px;
-				margin-top: 50px;
-				margin-left: auto;
-				margin-right: auto;
-				max-width: 70%;
-			}
-
-			@media only screen and (max-width: 50em) {
-				.single-post-image {
-					max-width: 95%;
-				}
-			}
-		</style>
 	{{end}}
 
 	{{ if eq .Type $.Site.Params.contentTypeName }}

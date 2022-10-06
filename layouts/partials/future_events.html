@@ -1,7 +1,8 @@
 <div class="home-box-child framed">
 	<h3><i>Επόμενη εκδήλωση: </i></h3>
-	{{ $future_events := (where (where site.RegularPages "Type" "events") ".Params.event_date" "gt" (now.Format "2006-01-02T15:04:05-0700")) }}
-	{{ if gt $future_events 0 }}	
+	{{ $future_query := (union (where site.RegularPages "Type" "events") (where site.RegularPages "Type" "actions")) }}
+	{{ $future_events := (where $future_query ".Params.event_date" "gt" (now.Format "2006-01-02T15:04:05-0700")) }}
+	{{ if gt $future_events 0 }}
 		{{ range first 2 ( sort $future_events ".Params.event_date" ) }}
    			<p>{{ time.Format "Monday, 2 January 15:04" (time .Params.event_date) }}: 
 				<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>

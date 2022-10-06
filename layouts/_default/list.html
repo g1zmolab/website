@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ with .Content }}
-<div class="index-content">
+<div class="index-category-content">
 	{{ . }}
 </div>
 {{ end }}
@@ -53,10 +53,9 @@
 			<div class="thumbnail">
 				
 			<a class="thumbnail-link" href="{{ .Permalink }}">
-				{{ $url := printf "%s%s" .Site.BaseURL .Params.thumbnail }}
-				{{ $image := resources.GetRemote $url }}
-				{{ $image := $image.Resize "250x" }}
-				<img src="{{ $image.RelPermalink }}">
+				{{ $imagePath := printf "%s" .Params.thumbnail }}
+				{{- $image := resources.Get $imagePath -}}
+				<img class="thumbnail-image" src="{{ ($image.Resize "250x").RelPermalink }}" />
 			</a>
 			</div>
 			{{end}}
