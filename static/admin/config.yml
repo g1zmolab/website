@@ -34,7 +34,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "event_date", widget: "datetime"}
+      - {label: "Event Date", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
@@ -48,7 +48,7 @@ collections:
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "event_date", widget: "datetime"}
+      - {label: "Event Date", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
       - {label: "Slug for URL", name: "slug_url", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
