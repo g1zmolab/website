@@ -53,9 +53,9 @@
 			<div class="thumbnail">
 				
 			<a class="thumbnail-link" href="{{ .Permalink }}">
-				{{ $imagePath := printf "%s" .Params.thumbnail }}
-				{{- $image := resources.Get $imagePath -}}
-				<img class="thumbnail-image" src="{{ ($image.Resize "250x").RelPermalink }}" />
+				{{ $image := resources.Get .Params.thumbnail }}
+				{{ $image := $image.Resize "250x" }}
+				<img class="thumbnail-image" src="{{ $image.RelPermalink }}" />
 			</a>
 			</div>
 			{{end}}
