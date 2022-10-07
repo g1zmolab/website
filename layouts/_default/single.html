@@ -49,7 +49,9 @@
 
 	{{if .Params.thumbnail}}
 		<a href="{{ .Params.thumbnail }}">
-			<img class="single-post-image" src="{{ .Params.thumbnail }}">
+			{{ with resources.Get .Params.thumbnail }}
+			<img class="single-post-image" src="{{ .RelPermalink }}">
+			{{ end }}
 		</a>
 	{{end}}
 
