@@ -5,6 +5,11 @@
 </div>
 {{ end }}
 <div class="posts">
+	{{ $numOfPages := len .Paginator.Pages }}
+	{{ if eq $numOfPages 0 }}
+	<h2>{{ .Site.Params.emptySectionMessage }}</h2>
+	{{ end }}
+
 	{{ range .Paginator.Pages }}
 	<div class="post on-list post-thumbnail-parent">
 		<div>
@@ -32,7 +37,6 @@
 
 			{{ partial "cover.html" . }}
 
-
 			<div class="post-content">
 				{{ if .Params.showFullContent }}
 				{{ .Content }}
@@ -53,9 +57,9 @@
 			<div class="thumbnail">
 				
 			<a class="thumbnail-link" href="{{ .Permalink }}">
-				{{ $imagePath := printf "%s" .Params.thumbnail }}
-				{{- $image := resources.Get $imagePath -}}
-				<img class="thumbnail-image" src="{{ ($image.Resize "250x").RelPermalink }}" />
+				{{ $image := resources.Get .Params.thumbnail }}
+				{{ $image := $image.Resize "250x" }}
+				<img class="thumbnail-image" src="{{ $image.RelPermalink }}" />
 			</a>
 			</div>
 			{{end}}

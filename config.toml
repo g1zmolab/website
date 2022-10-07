@@ -22,6 +22,8 @@ timeZone = "Europe/Athens"
   # ["orange", "blue", "red", "green", "pink"]
   themeColor = "orange"
 
+  emptySectionMessage = "Δυστυχώς δεν υπάρχει κάτι μέχρι στιγμής :("
+
   # if you set this to 0, only submenu trigger will be visible
   showMenuItems = 5
 
