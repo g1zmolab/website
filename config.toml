@@ -4,6 +4,7 @@ defaultContentLanguage = "el"
 languageCode = "el-gr"
 theme = "terminal"
 paginate = 5
+paginatePath = ""
 copyright = "🄯 copyleft 2022 gizmolab"
 title = "Gizmolab"
 timeZone = "Europe/Athens"
