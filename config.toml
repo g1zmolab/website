@@ -1,12 +1,11 @@
 baseurl = "https://gizmolab.net/"
-#languageCode = "en-us"
 defaultContentLanguage = "el"
 languageCode = "el-gr"
 theme = "terminal"
 paginate = 5
 paginatePath = ""
-copyright = "🄯 copyleft 2022 gizmolab"
-title = "Gizmolab"
+copyright = "🄯 copyleft 2022 gizmo_lab"
+title = "gizmo_lab"
 timeZone = "Europe/Athens"
 
 [markup]
@@ -106,31 +105,4 @@ timeZone = "Europe/Athens"
         identifier = "contact"
         name = "Επικοινωνία"
         url = "/contact"
-        weight = 5
-        
-#  [languages.en]
-#    languageName = "English"
-#    subtitle = "A hacklab based in Thessaloniki"
-#    owner = "Gizmolab team"
-#    menuMore = "Show more"
-#    readMore = "Read more"
-#    readOtherPosts = "Read other posts"
-#    newerPosts = "Newer posts"
-#    olderPosts = "Older posts"
-#    missingContentMessage = "Page not found..."
-#    missingBackButtonLabel = "Back to home page"
-
-#    [languages.en.params.logo]
-#      logoImg = "/gizmolab-logo-small.png"
-#      logoText = "Gizmolab"
-#      logoHomeLink = "/"
-
-#    [languages.en.menu]
-#      [[languages.en.menu.main]]
-#        identifier = "about"
-#        name = "About"
-#        url = "/about"
-#      [[languages.el.menu.main]]
-#        identifier = "movies"
-#        name = "Movie Shows"
-#        url = "/tags/provoles"
+        weight = 5 
