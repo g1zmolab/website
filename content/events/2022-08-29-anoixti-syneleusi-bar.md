@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Ανοιχτή συνέλευση + bar
+event_date: 2022-08-23T19:00:00
 slug_url: anoixti-syneleusi-bar
 date: 2022-08-19T10:01:45.373Z
 tags:

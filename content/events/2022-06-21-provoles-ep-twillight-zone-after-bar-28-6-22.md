@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Προβολή επεισοδίων "The Twilight Zone" + after bar
-event_date: 2022-06-28T16:00:55.981Z
+event_date: 2022-06-28T19:00:55
 slug_url: provoles-ep-twillight-zone-after-bar-28-6-22
 date: 2022-06-21T12:40:56.033Z
 thumbnail: /images/twilight-zone-28-6-22.jpg

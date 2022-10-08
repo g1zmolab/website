@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: 'Προβολή: "Videodrome"'
-event_date: 2022-04-26T16:01:44.912Z
+event_date: 2022-04-26T16:01:44
 slug_url: provoli-videodrome-26-4-22
 date: 2022-04-19T20:07:44.962Z
 thumbnail: /images/videodrome-26-4-22.jpg
