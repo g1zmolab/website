@@ -67,7 +67,7 @@ collections:
       - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Σελίδες"
+  - label: "Pages"
     name: "pages"
     files:
       - label: "Σχετικά"
@@ -86,7 +86,7 @@ collections:
         name: "next-assembly"
         file: "data/next_assembly.yml"
         fields:
-          - label: "Ημερομηνία"
+          - label: "Date"
             name: "date"
             widget: "datetime"
             date_format: "DD/MM/YYYY" # e.g. 24.12.2021
