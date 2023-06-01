@@ -11,4 +11,14 @@ tags:
   - birthday
   - games
 ---
-More info soon...
+Το gizmo_lab κλείνει 1 χρόνο και το γιορτάζει με live electronics, cocktails, games (arcade & 1-D dungeon) και φυσικά τούρτα.
+
+1 χρόνος gizmo_lab\
+1 χρόνος hacks\
+1 χρόνος restart τον server\
+1 χρόνος linux & hack bars\
+1 χρόνος προβολές και συζητήσεις\
+1 χρόνος arcade & 1-D dungeon\
+1 χρόνος gizmocats
+
+Την Τρίτη 6 Ιουνίου από τις 20:00 (όντως!) στο Κοινωνικό Κέντρο Ovradera (Επισκόπου Αμβροσίου 3, περιοχή Αντιγονιδών)
