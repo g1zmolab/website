@@ -91,3 +91,16 @@ You can find a lot of useful information in the Hugo and Netlify CMS documentati
      <meta property="og:image" content="{{ printf "img/favicon/%s.png" $.Site.Params.ThemeColor | absURL }}">
    {{ end }}
 ```
+
+```diff
+--- a/layouts/partials/footer.html
++++ b/layouts/partials/footer.html
+@@ -7,7 +7,6 @@
+       <div class="copyright">
+         <span>© {{ now.Year }} Powered by <a href="http://gohugo.io">Hugo</a></span>
+     {{ end }}
+-        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+       </div>
+   </div>
+ </footer>
+```
