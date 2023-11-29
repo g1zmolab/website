@@ -104,3 +104,34 @@ You can find a lot of useful information in the Hugo and Netlify CMS documentati
    </div>
  </footer>
 ```
+
+```diff
+--- a/layouts/_default/index.html
++++ b/layouts/_default/index.html
+@@ -4,6 +4,10 @@
+       {{ .Content }}
+     </div>
+   {{ end }}
++  <div class="home-box-parent">
++    {{ partial "future_events.html" . }}
++    {{ partial "next_assembly.html" . }}
++  </div>
+   <div class="posts">
+     {{ $isntDefault := not (or (eq (trim $.Site.Params.contentTypeName " ") "posts") (eq (trim $.Site.Params.contentTypeName " ") "")) }}
+     {{ $contentTypeName := cond $isntDefault (string $.Site.Params.contentTypeName) "posts" }}
+@@ -21,10 +25,10 @@
+         </h1>
+
+         <div class="post-meta">
+-          {{ with .Date }}
+-            <time class="post-date">
+-              {{ .Format "2006-01-02" }}
+-            </time>
++            {{ if .Params.event_date }}
++              <span class="post-date">
++                {{ time.Format "Monday, 2 January @ 15:04" (time .Params.event_date) }}
++              </span>
+           {{ end }}
+           {{ with .Params.Author }}
+             <span class="post-author">:: {{ . }}</span>
+```
