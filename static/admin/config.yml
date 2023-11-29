@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: g1zmolab/website
-  branch: production
+  branch: main
 
 media_folder: "assets/images"
 public_folder: "/images"
