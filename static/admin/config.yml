@@ -13,61 +13,53 @@ slug:
   clean_accents: true
   sanitize_replacement: "-"
 
+locale: 'gr'
+
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
-    label: "Posts"
+    label: "Δημοσιεύσεις"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug for URL", name: "slug_url", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Τιτλος", name: "title", widget: "string"}
+      - {label: "ημερομηνια δημοσιευσης", name: "date", widget: "datetime"}
+      - {label: "Slug για το URL (η ημερομηνια μπαινει αυτοματα)", name: "slug_url", widget: "string"}
+      - {label: "ετικετες", name: "tags", widget: "list"}
+      - {label: "κειμενο", name: "body", widget: "markdown"}
+
   - name: "events" # Used in routes, e.g., /admin/collections/blog
-    label: "Events"
+    label: "Εκδηλώσεις"
     folder: "content/events"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
-      - {label: "Slug for URL", name: "slug_url", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Τιτλος", name: "title", widget: "string"}
+      - {label: "ημερομηνια δημοσιευσης", name: "date", widget: "datetime"}
+      - {label: "ημερομηνια καλεσματος", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
+      - {label: "Slug για το URL (η ημερομηνια μπαινει αυτοματα)", name: "slug_url", widget: "string"}
+      - {label: "εικονα", name: "thumbnail", widget: "image", choose_url: true, required: false}
+      - {label: "ετικετες", name: "tags", widget: "list"}
+      - {label: "κειμενο", name: "body", widget: "markdown"}
+
   - name: "actions" # Used in routes, e.g., /admin/collections/blog
-    label: "Actions"
+    label: "Δράσεις"
     folder: "content/actions"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
-      - {label: "Slug for URL", name: "slug_url", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "projects" # Used in routes, e.g., /admin/collections/blog
-    label: "Projects"
-    folder: "content/projects"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug_url}}" #todo: try to add greeklish slug
-    fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Slug for URL", name: "slug_url", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "thumbnail", widget: "image", choose_url: true, required: false}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - label: "Pages"
+      - {label: "Τιτλος", name: "title", widget: "string"}
+      - {label: "ημερομηνια δημοσιευσης", name: "date", widget: "datetime"}
+      - {label: "ημερομηνια καλεσματος", name: "event_date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss"}
+      - {label: "Slug για το URL (η ημερομηνια μπαινει αυτοματα)", name: "slug_url", widget: "string"}
+      - {label: "εικονα", name: "thumbnail", widget: "image", choose_url: true, required: false}
+      - {label: "ετικετες", name: "tags", widget: "list"}
+      - {label: "κειμενο", name: "body", widget: "markdown"}
+
+  - label: "Σελίδες"
     name: "pages"
     files:
       - label: "Σχετικά"
