@@ -51,4 +51,3 @@ You can find a lot of useful information in the Hugo and Netlify CMS documentati
 
 
  
-test
