@@ -4,7 +4,7 @@ languageCode = "el-gr"
 theme = "terminal"
 paginate = 5
 paginatePath = ""
-copyright = "🄯 copyleft 2022 gizmo_lab"
+copyright = "🄯 copyleft 2024 gizmo_lab"
 title = "gizmo_lab"
 timeZone = "Europe/Athens"
 
