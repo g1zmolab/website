@@ -4,6 +4,7 @@ title: Arcade Bar
 date: 2024-12-02T19:46:00
 event_date: 2024-12-11T20:00:00
 slug_url: arcade-bar
+thumbnail: /images/arcade_bar.png
 tags:
   - bar
 ---
