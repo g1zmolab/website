@@ -55,16 +55,18 @@
       </div>
       {{ end }}
     </div>
-    {{if .Params.thumbnail}}
-    <div class="thumbnail">
-
-      <a class="thumbnail-link" href="{{ .Permalink }}">
-        {{ $image := resources.Get .Params.thumbnail }}
-        {{ $image := $image.Resize "250x" }}
-        <img class="thumbnail-image" src="{{ $image.RelPermalink }}" />
-      </a>
-    </div>
-    {{end}}
+{{ if .Params.thumbnail }}
+<div class="thumbnail">
+  <a class="thumbnail-link" href="{{ .Permalink }}">
+    {{ with resources.Get .Params.thumbnail }}
+      {{ $thumb := .Resize "250x" }}
+      <img class="thumbnail-image" src="{{ $thumb.RelPermalink }}" alt="">
+    {{ else }}
+      <img class="thumbnail-image" src="{{ .Params.thumbnail }}" alt="">
+    {{ end }}
+  </a>
+</div>
+{{ end }}
   </div>
   {{ end }}
   {{ partial "pagination.html" . }}
