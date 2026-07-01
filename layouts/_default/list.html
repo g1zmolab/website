@@ -61,7 +61,7 @@
         {{ $img := .Resize "250x" }}
         <img src="{{ $img.RelPermalink }}" alt="">
       {{ end }}
-    {{ else }}
+    {{ else if hasPrefix $thumb "/" }}
       {{ with resources.Get $thumb }}
         {{ $img := .Resize "250x" }}
         <img src="{{ $img.RelPermalink }}" alt="">
