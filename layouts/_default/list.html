@@ -54,6 +54,8 @@
         <a class="read-more button" href="{{.RelPermalink}}">{{ $.Site.Params.ReadMore }} →</a>
       </div>
       {{ end }}
+      
+    </div>
       {{if .Params.thumbnail}}
       <div class="thumbnail">
         <a class="thumbnail-link" href="{{ .Permalink }}">
@@ -74,7 +76,6 @@
         </a>
       </div>
       {{ end }}
-    </div>
   </div>
   {{ end }}
   {{ partial "pagination.html" . }}
