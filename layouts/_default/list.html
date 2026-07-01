@@ -55,18 +55,18 @@
       </div>
       {{ end }}
     </div>
-{{ if .Params.thumbnail }}
-<div class="thumbnail">
-  <a class="thumbnail-link" href="{{ .Permalink }}">
-    {{ with resources.Get .Params.thumbnail }}
-      {{ $thumb := .Resize "250x" }}
-      <img class="thumbnail-image" src="{{ $thumb.RelPermalink }}" alt="">
+    {{ $thumb := .Params.thumbnail }}
+    {{ if hasPrefix $thumb "http" }}
+      {{ with resources.GetRemote $thumb }}
+        {{ $img := .Resize "250x" }}
+        <img src="{{ $img.RelPermalink }}" alt="">
+      {{ end }}
     {{ else }}
-      <img class="thumbnail-image" src="{{ .Params.thumbnail }}" alt="">
+      {{ with resources.Get $thumb }}
+        {{ $img := .Resize "250x" }}
+        <img src="{{ $img.RelPermalink }}" alt="">
+      {{ end }}
     {{ end }}
-  </a>
-</div>
-{{ end }}
   </div>
   {{ end }}
   {{ partial "pagination.html" . }}
