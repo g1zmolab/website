@@ -4,7 +4,7 @@ title: "Workshop: self hosted apps // reclaim your internet"
 date: 2026-07-01T11:10:00.000+03:00
 event_date: 2026-07-01T19:00:00
 slug_url: self-hosted
-thumbnail: https://www.kinimatorama.net/files/import-images/c866de3610c910ddf7ea5aef4ade10e2.png
+thumbnail: /images/selfhosted.jpg
 tags:
   - workshop
 ---
