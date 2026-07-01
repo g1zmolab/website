@@ -58,13 +58,15 @@
     {{ $thumb := .Params.thumbnail }}
     {{ if hasPrefix $thumb "http" }}
       {{ with resources.GetRemote $thumb }}
-        {{ $img := .Resize "250x" }}
-        <img src="{{ $img.RelPermalink }}" alt="">
+        {{ with .Resize "250x" }}
+          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+        {{ end }}
       {{ end }}
     {{ else if hasPrefix $thumb "/" }}
       {{ with resources.Get $thumb }}
-        {{ $img := .Resize "250x" }}
-        <img src="{{ $img.RelPermalink }}" alt="">
+        {{ with .Resize "250x" }}
+          <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="">
+        {{ end }}
       {{ end }}
     {{ end }}
   </div>
