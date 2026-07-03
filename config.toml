@@ -101,3 +101,8 @@ timeZone = "Europe/Athens"
         name = "Επικοινωνία"
         url = "/contact"
         weight = 5 
+       [[languages.el.menu.main]]
+        identifier = "wiki"
+        name = "Wiki"
+        url = "https://wiki.gizmolab.net/"
+        weight = 6 
