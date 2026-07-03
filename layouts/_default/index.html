@@ -67,34 +67,41 @@
 
     {{ partial "pagination.html" . }}
   </div> -->
- <div style="background:#1a1625; padding:2rem; border-radius:4px; font-family: 'Courier New', monospace;">
+ <div style="font-family: 'Courier New', monospace;">
 
-<div style="color:#e8935a; font-size:12px; letter-spacing:2px; margin-bottom:1.5rem; opacity:0.7; overflow:hidden; white-space:nowrap;">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div>
-
-<div style="border:1px solid #4a4560; padding:1.5rem; background:#211c30;">
   <div style="color:#8a85a0; font-size:13px; margin-bottom:1rem;">$ ./gizmo_lab.sh --status</div>
 
   <div style="display:flex; flex-direction:column; gap:6px; font-size:13px; line-height:1.6;">
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">mounting /hacklab/thessaloniki</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading events.service</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading actions.service</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading projects.service</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading open_assembly.service</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">free software </span><span style="color:#5c5670;">:: always</span></div>
-    <div><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">hierarchy </span><span style="color:#5c5670;">:: none</span></div>
-    <div><span style="color:#e07a7a;">[FAIL]</span> <span style="color:#c9c5d6;">capitalism.service </span><span style="color:#5c5670;">:: masked</span></div>
-    <div><span style="color:#e07a7a;">[FAIL]</span> <span style="color:#c9c5d6;">state.service </span><span style="color:#5c5670;">:: masked</span></div>
+    <div class="log-line" style="animation-delay: 0.3s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">mounting /hacklab/thessaloniki</span></div>
+    <div class="log-line" style="animation-delay: 0.8s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading events.service</span></div>
+    <div class="log-line" style="animation-delay: 1.2s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading actions.service</span></div>
+    <div class="log-line" style="animation-delay: 1.2s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading projects.service</span></div>
+    <div class="log-line" style="animation-delay: 1.5s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">loading open_assembly.service</span></div>
+    <div class="log-line" style="animation-delay: 1.8s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">free software </span><span style="color:#5c5670;">:: always</span></div>
+    <div class="log-line" style="animation-delay: 2.1s;"><span style="color:#7dd88f;">[ OK ]</span> <span style="color:#c9c5d6;">hierarchy </span><span style="color:#5c5670;">:: none</span></div>
+    <div class="log-line" style="animation-delay: 3.0s;"><span style="color:#e07a7a;">[FAIL]</span> <span style="color:#c9c5d6;">capitalism.service </span><span style="color:#5c5670;">:: masked</span></div>
+    <div class="log-line" style="animation-delay: 3.0s;"><span style="color:#e07a7a;">[FAIL]</span> <span style="color:#c9c5d6;">state.service </span><span style="color:#5c5670;">:: masked</span></div>
   </div>
 
-  <div style="margin-top:1.2rem; padding-top:1rem; border-top:1px dashed #3a3550; font-size:13px; color:#e8935a;">
+  <div class="final-msg" style="animation-delay: 4.0s; margin-top:1.2rem; padding-top:1rem; border-top:1px dashed #3a3550; font-size:13px; color:#e8935a;">
     gizmo_lab is up. all comrades welcome.<span style="display:inline-block; width:8px; height:14px; background:#e8935a; margin-left:4px; animation:blink 1s step-end infinite; vertical-align:-2px;"></span>
   </div>
-</div>
-
-<div style="color:#e8935a; font-size:12px; letter-spacing:2px; margin-top:1.5rem; opacity:0.7; overflow:hidden; white-space:nowrap;">||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</div>
 
 <style>
+/* Cursor animation */
 @keyframes blink { 50% { opacity: 0; } }
+
+/* Line animation */
+@keyframes loadLine {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Initially hidden, appear abruptly (step-end) as a true terminal */
+.log-line, .final-msg {
+  opacity: 0;
+  animation: loadLine 0.1s step-end forwards;
+}
 </style>
 </div>
 {{ end }}
