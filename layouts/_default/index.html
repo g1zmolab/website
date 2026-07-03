@@ -120,4 +120,94 @@
 &nbsp;&nbsp;└──<a href="https://wiki.gizmolab.net/" target="_blank" style="color:inherit; text-decoration:none; font-weight:normal;">wiki&nbsp;<span style="color:#e8935a;">↗</span><span style="color:#e8935a;"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# projects, τεκμηρίωση</span><br>
 </p>
 </div>
+
+<div style="min-height:160px;" id="term" onclick="document.getElementById('cmdline').focus()">
+  <div id="output" style="font-size:13px; line-height:1.6; color:#c9c5d6; white-space:pre-wrap;"></div>
+  <div style="display:flex; align-items:center; gap:6px; margin-top:4px;">
+    <span style="color:#7dd88f; font-size:13px;">guest@gizmo_lab:~$</span>
+    <input id="cmdline" autocomplete="off" spellcheck="false" style="background:transparent; border:none; outline:none; color:#e8935a; font-family:'Courier New', monospace; font-size:13px; flex:1; caret-color:#e8935a;" />
+  </div>
+</div>
+<div style="color:#e8935a; font-size:12px; margin-top:8px;">πληκτρολόγησε <span style="color:#e8935a; font-weight: bold;">help</span> για εντολές</div>
+
+<script>
+(function(){
+  var out = document.getElementById('output');
+  var input = document.getElementById('cmdline');
+  var term = document.getElementById('term');
+
+  var pages = {
+    about: '/about',
+    actions: '/actions',
+    events: '/events',
+    contact: '/contact'
+  };
+
+  function line(text, color){
+    var d = document.createElement('div');
+    d.style.color = color || '#c9c5d6';
+    d.textContent = text;
+    out.appendChild(d);
+  }
+  function echoCmd(cmd){
+    var d = document.createElement('div');
+    d.style.color = '#7dd88f';
+    d.textContent = 'guest@gizmo_lab:~$ ' + cmd;
+    out.appendChild(d);
+  }
+
+  function run(raw){
+    var cmd = raw.trim();
+    echoCmd(cmd);
+    if (cmd === '') { return; }
+    var parts = cmd.split(/\s+/);
+    var base = parts[0];
+
+    if (base === 'help') {
+      line('διαθέσιμες εντολές:');
+      line('  ls                 δείξε τις σελίδες');
+      line('  cd <σελίδα>        πήγαινε σε σελίδα (about, actions, events, contact, wiki)');
+      line('  whoami             ποιος είσαι εδώ μέσα');
+      line('  cat about.txt      σύντομο about');
+      line('  clear              καθάρισε την οθόνη');
+    } else if (base === 'ls') {
+      line('about/  actions/  events/  contact/  wiki@ -> https://wiki.gizmolab.net/', '#e8935a');
+    } else if (base === 'whoami') {
+      line('guest — welcome, no account needed here.');
+    } else if (base === 'cat' && parts[1] === 'about.txt') {
+      line('gizmo_lab: hacklab στη Θεσσαλονίκη. οριζόντια δομή, ελεύθερο λογισμικό, ανοιχτές συνελεύσεις.');
+      line('περισσότερα: cd about', '#5c5670');
+    } else if (base === 'clear') {
+      out.innerHTML = '';
+    } else if (base === 'sudo') {
+      line('Permission denied: no gods, no masters.', '#e07a7a');
+    } else if (base === 'cd') {
+      var target = (parts[1] || '').toLowerCase();
+      if (target === 'wiki') {
+        line('opening https://wiki.gizmolab.net/ ...', '#e8935a');
+        window.open('https://wiki.gizmolab.net/', '_blank', 'noopener');
+      } else if (pages[target]) {
+        line('πηγαίνοντας σε ' + pages[target] + ' ...', '#e8935a');
+        window.location.href = pages[target];
+      } else if (target === '') {
+        line('cd: δώσε προορισμό. δοκίμασε ls');
+      } else {
+        line('cd: δεν υπάρχει τέτοιος φάκελος: ' + target, '#e07a7a');
+      }
+    } else {
+      line(base + ': command not found. δοκίμασε help', '#e07a7a');
+    }
+    term.scrollTop = term.scrollHeight;
+  }
+
+  line('type help to get started', '#5c5670');
+
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Enter') {
+      run(input.value);
+      input.value = '';
+    }
+  });
+})();
+</script>
 {{ end }}
