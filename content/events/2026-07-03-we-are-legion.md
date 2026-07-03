@@ -2,7 +2,7 @@
 layout: blog
 title: "Προβολή ντοκιμαντέρ | We Are Legion: The Story of the Hacktivists"
 date: 2026-07-04T01:58:00.000+03:00
-event_date: 2026-07-22T20:00:00
+event_date: 2026-07-15T20:00:00
 slug_url: we-are-legion
 thumbnail: /images/we_are_legion.jpg
 tags:
