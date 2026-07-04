@@ -221,4 +221,90 @@
   });
 })();
 </script>
+
+<div style="padding:3rem 0; display:flex; justify-content:center; align-items:center;">
+
+<div id="glitchWrap" data-text="gizmo_lab" style="font-family:'Orbit-B BT', 'Courier New', monospace; font-weight:700; font-size:44px; letter-spacing:3px; position:relative; display:inline-block;">
+  <span id="glitchText"><span style="color:#e8935a;">g</span><span style="color:#c9c5d6;">izmo_lab</span></span>
+</div>
+
+<style>
+@font-face {
+  font-family: 'Orbit-B BT';
+  src: url('/fonts/orbit-bbt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+#glitchWrap.glitching::before, #glitchWrap.glitching::after {
+  content: attr(data-text);
+  position:absolute; left:0; top:0; width:100%;
+  overflow:hidden;
+}
+#glitchWrap.glitching::before {
+  color:#7d5ae8; clip-path: inset(0 0 60% 0);
+  transform: translate(-3px,-1px); opacity:0.7;
+  animation: glitchTop 0.35s steps(2) infinite;
+}
+#glitchWrap.glitching::after {
+  color:#4fb3bf; clip-path: inset(40% 0 0 0);
+  transform: translate(3px,1px); opacity:0.7;
+  animation: glitchBottom 0.35s steps(2) infinite;
+}
+@keyframes glitchTop {
+  0% { transform: translate(-3px,-1px); }
+  50% { transform: translate(2px,-2px); }
+  100% { transform: translate(-3px,-1px); }
+}
+@keyframes glitchBottom {
+  0% { transform: translate(3px,1px); }
+  50% { transform: translate(-2px,2px); }
+  100% { transform: translate(3px,1px); }
+}
+</style>
+
+<script>
+(function(){
+  var el = document.getElementById('glitchText');
+  var wrap = document.getElementById('glitchWrap');
+  var original = 'gizmo_lab';
+  var glitchChars = '!<>-_/[]{}=+*^#$%&';
+
+  function render(text){
+    var first = text[0];
+    var rest = text.slice(1);
+    el.innerHTML = '<span style="color:#e8935a;">' + first + '</span><span style="color:#c9c5d6;">' + rest + '</span>';
+  }
+
+  function scrambleOnce(){
+    var arr = original.split('');
+    var hits = 1 + Math.floor(Math.random()*2);
+    for (var i=0;i<hits;i++){
+      var idx = 1 + Math.floor(Math.random()*(arr.length-1));
+      arr[idx] = glitchChars[Math.floor(Math.random()*glitchChars.length)];
+    }
+    render(arr.join(''));
+  }
+
+  function burst(){
+    wrap.classList.add('glitching');
+    var frames = 5, i = 0;
+    var iv = setInterval(function(){
+      scrambleOnce();
+      i++;
+      if (i >= frames){
+        clearInterval(iv);
+        render(original);
+        wrap.classList.remove('glitching');
+      }
+    }, 80);
+  }
+
+  render(original);
+  setInterval(burst, 3200 + Math.random()*2000);
+})();
+</script>
+
+</div>
+
 {{ end }}
