@@ -39,6 +39,7 @@ collections:
       - {label: "Τιτλος", name: "title", widget: "string"}
       - {label: "ημερομηνια δημοσιευσης", name: "date", widget: "datetime"}
       - {label: "Slug για το URL (η ημερομηνια μπαινει αυτοματα)", name: "slug_url", widget: "string"}
+      - {label: "εικονα", name: "thumbnail", widget: "image", choose_url: true, required: false}
       - {label: "ετικετες", name: "tags", widget: "list"}
       - {label: "κειμενο", name: "body", widget: "markdown"}
 
