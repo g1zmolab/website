@@ -25,7 +25,7 @@ timeZone = "Europe/Athens"
   emptySectionMessage = "Δυστυχώς δεν υπάρχει κάτι μέχρι στιγμής :("
 
   # if you set this to 0, only submenu trigger will be visible
-  showMenuItems = 5
+  showMenuItems = 6
 
   showLanguageSelector = false
   fullWidthTheme = false
